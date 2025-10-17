@@ -1,0 +1,506 @@
+openapi: 3.0.4
+info:
+  title: Coolstore services
+  version: "1"
+  contact:
+    name: coolstore microservice project
+    url: https://vietnam-devs.github.io/coolstore-microservices/
+tags:
+  - name: CartService
+  - name: CatalogService
+  - name: InventoryService
+  - name: RatingService
+
+paths:
+  /cart/api/carts:
+  
+    post:
+      tags:
+        - CartService
+      description: Create a cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: 
+                userId:
+                  type: string
+                  example: 'u11'
+                products: 
+                  type: array
+                  items:
+                    type: string
+                    example: "p1"
+      responses:
+        200: 
+          description: "cart is successfully created"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  
+    put:
+      tags:
+        - CartService
+      description: update cart
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId: 
+                  type: string
+                  example: "u1"
+                products:
+                  type: array
+                  items:
+                    type: string
+                    example: "p1"
+      responses:
+        200:
+          description: "update cart successfully"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
+                    
+  /cart/api/carts/{cart_id}:
+    get:
+      tags:
+        - CartService
+      description: get a specific cart
+      parameters:
+        - name: cart_id
+          in: path
+          description: the cart id to search for
+          required: true
+          schema:
+            type: string
+            example: 'c1'
+      responses:
+        200:
+          description: cart is successfully returned
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userId: 
+                    type: string
+                    example: "u1"
+                  products:
+                    type: array
+                    items:
+                      type: string
+                      example: "p1"
+  /cart/api/carts/{cart_id}/checkout:
+    put:
+      tags:
+        - CartService
+      description: get a specific cart
+      parameters:
+        - name: cart_id
+          in: path
+          description: the cart id to search for
+          required: true
+          schema:
+            type: string
+            example: 'c1'
+      responses:
+        200:
+          description: cart is successfully checkout
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
+  /cart/api/carts/{cart_id}/items/{product_id}:
+    delete:
+      tags:
+        - CartService
+      description: get a specific cart
+      parameters:
+        - name: cart_id
+          in: path
+          description: the cart id to search for
+          required: true
+          schema:
+            type: string
+            example: 'c1'
+        - name: product_id
+          in: path
+          description: the product to be removed from cart
+          required: true
+          schema:
+            type: string
+            example: 'p1'
+      responses:
+        200:
+          description: product is successfully removed from cart
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
+  /catalog/api/products:
+    post:
+      tags:
+        - CatalogService
+      description: Create a product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: 
+                productName:
+                  type: string
+                  example: 'ultra vibrator 2000'
+                price: 
+                  type: number
+                  example: 102.44
+      responses:
+        200: 
+          description: "product is successfully created"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+  
+  /catalog/api/products/{current_page}/{high_price}:
+    get:
+      tags:
+        - CatalogService
+      description: get products at {current_page} with price>={high_price}
+      parameters:
+        - name: current_page
+          in: path
+          schema:
+            type: integer
+            example: 3
+          required: true
+        - name: high_price
+          in: path
+          schema:
+            type: number
+            example: 100.5
+          required: true
+      responses:
+        200: 
+          description: list of product at page {current_page} with price>={high_price}
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    productId:
+                      type: string
+                      example: "p1"
+                    productName::
+                      type: string
+                      example: "toy 101"
+                    pridce:
+                      type: number
+                      example: 14.2
+                
+  /catalog/api/products/{product_id}:
+    get:
+      tags:
+        - CatalogService
+      description: get products with specific id
+      parameters:
+        - name: product_id
+          in: path
+          schema:
+            type: string
+            example: 'p3'
+          required: true
+      responses:
+        200: 
+          description: list of product at page {current_page} with price>={high_price}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  productId:
+                    type: string
+                    example: "p1"
+                  productName::
+                    type: string
+                    example: "toy 101"
+                  pridce:
+                    type: number
+                    example: 14.2
+  /inventory/api/availabilities:
+    get:
+      tags:
+        - InventoryService
+      description: get avaiable products in inventory
+      responses:
+        200: 
+          description: list of avaiable products in inventory
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    productId:
+                      type: string
+                      example: "p1"
+                    productName::
+                      type: string
+                      example: "toy 101"
+                    pridce:
+                      type: number
+                      example: 14.2
+    
+  /inventory/api/availabilities/{id}:
+    get:
+      tags:
+        - InventoryService
+      description: get avaiable products in inventory with specific id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            example: 'p23'
+      responses:
+        200: 
+          description: avaiable product in inventory with specific id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  productId:
+                    type: string
+                    example: "p1"
+                  productName::
+                    type: string
+                    example: "toy 101"
+                  pridce:
+                    type: number
+                    example: 14.2
+  /inventory/api/availabilities/migrate:
+    post:
+      tags:
+        - InventoryService
+      description: migrate a product from one inventory to another
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId: 
+                  type: string
+                  example: 'p12'
+                inventoryId:
+                  type: string
+                  example: 'i2'
+      responses:
+        200: 
+          description: migrate successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  
+  /rating/api/ratings:
+    get:
+      tags:
+        - RatingService
+      summary: Retrieve all product ratings
+      responses:
+        '200':
+          description: Successful response with list of all ratings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    productId:
+                      type: string
+                      example: "PROD-123"
+                    rating:
+                      type: integer
+                      minimum: 1
+                      maximum: 5
+                      example: 4
+                    userId:
+                      type: string
+                      example: "USER-456"
+                    comment:
+                      type: string
+                      example: "Great taste!"
+    post:
+      tags:
+        - RatingService
+      summary: Create a new product rating
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: string
+                  example: "PROD-123"
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  example: 4
+                userId:
+                  type: string
+                  example: "USER-456"
+                comment:
+                  type: string
+                  example: "Great taste!"
+      responses:
+        '200':
+          description: Successful creation of a new rating
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  productId:
+                    type: string
+                    example: "PROD-123"
+                  rating:
+                    type: integer
+                    minimum: 1
+                    maximum: 5
+                    example: 4
+                  userId:
+                    type: string
+                    example: "USER-456"
+                  comment:
+                    type: string
+                    example: "Great taste!"
+    put:
+      tags:
+        - RatingService
+      summary: Update an existing product rating
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: string
+                  example: "PROD-123"
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  example: 5
+                userId:
+                  type: string
+                  example: "USER-456"
+                comment:
+                  type: string
+                  example: "Even better now!"
+      responses:
+        '200':
+          description: Successful update of the rating
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  productId:
+                    type: string
+                    example: "PROD-123"
+                  rating:
+                    type: integer
+                    minimum: 1
+                    maximum: 5
+                    example: 5
+                  userId:
+                    type: string
+                    example: "USER-456"
+                  comment:
+                    type: string
+                    example: "Even better now!"
+  /rating/api/ratings/{product_id}:
+    get:
+      tags:
+        - RatingService
+      summary: Retrieve ratings for a specific product
+      parameters:
+        - name: product_id
+          in: path
+          description: Unique identifier of the product
+          required: true
+          schema:
+            type: string
+          example: "PROD-123"
+      responses:
+        '200':
+          description: Successful response with ratings for the product
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    productId:
+                      type: string
+                      example: "PROD-123"
+                    rating:
+                      type: integer
+                      minimum: 1
+                      maximum: 5
+                      example: 4
+                    userId:
+                      type: string
+                      example: "USER-456"
+                    comment:
+                      type: string
+                      example: "Great taste!"
+                  required:
+                    - productId
+                    - rating
+
