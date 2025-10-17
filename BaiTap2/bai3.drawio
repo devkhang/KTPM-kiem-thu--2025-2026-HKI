@@ -1,0 +1,79 @@
+<mxfile host="Electron" modified="2025-09-16T10:59:29.300Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="caxKhVviIz7kEr5lKYYv" version="23.1.5" type="device">
+  <diagram name="Page-1" id="aXEnYEKyhN8AeZee-PJk">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="640" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-3" target="JcDa25oxDyFgYPMHnmDK-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-3" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-4" value="Register for Courses" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-6" value="Billing System" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="790" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-4" target="JcDa25oxDyFgYPMHnmDK-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-8" target="JcDa25oxDyFgYPMHnmDK-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-8" value="Professor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="30" y="330" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-9" value="Select Courses to Teach" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="330" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-11" target="JcDa25oxDyFgYPMHnmDK-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-11" target="JcDa25oxDyFgYPMHnmDK-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-19" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-11" target="JcDa25oxDyFgYPMHnmDK-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-11" value="Registrar" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="30" y="460" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-12" value="Maintain Curriculum" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="420" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-13" value="Registrar Validation" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="480" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-15" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-12" target="JcDa25oxDyFgYPMHnmDK-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="220" y="420" as="sourcePoint" />
+            <mxPoint x="380" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-16" value="Mantain Student Information" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="510" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-17" value="Maintain Professor Information" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="600" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-20" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-16" target="JcDa25oxDyFgYPMHnmDK-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="326" y="477" as="sourcePoint" />
+            <mxPoint x="524" y="513" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcDa25oxDyFgYPMHnmDK-21" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;" edge="1" parent="1" source="JcDa25oxDyFgYPMHnmDK-17" target="JcDa25oxDyFgYPMHnmDK-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="336" y="487" as="sourcePoint" />
+            <mxPoint x="534" y="523" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
